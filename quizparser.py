@@ -1,5 +1,5 @@
-# Example file for LinkedIn Learning Course "Python: Build a Quiz App" by Joe Marini
 # QuizParser builds a quiz from a source file
+
 import xml.sax
 from quiz import *
 from enum import Enum, unique
@@ -48,9 +48,9 @@ class QuizParser(xml.sax.ContentHandler):
             self._parse_state = QuizParserState.PARSE_DESCRIPTION
         elif tagname == "Question":
             self._parse_state = QuizParserState.PARSE_QUESTION
-            if (attrs["type"] == "multichoice"):
+            if attrs["type"] == "multichoice":
                 self._current_question = QuestioncMC()
-            elif (attrs["type"] == "tf"):
+            elif attrs["type"] == "tf":
                 self._current_question = QuestionTF()
             self._current_question.points = int(attrs["points"])
             self.new_quiz.total_points += self._current_question.points
@@ -65,7 +65,7 @@ class QuizParser(xml.sax.ContentHandler):
     def endElement(self, tagname):
         if tagname == "QuizML":
             self._parse_state = QuizParserState.IDLE
-        elif (tagname == "Description"):
+        elif tagname == "Description":
             self._parse_state = QuizParserState.PARSE_QUIZ
         elif tagname == "Question":
             # add the current question to the list

@@ -1,14 +1,17 @@
 # pyquiz.py -- Main starting point of the program
+
 from quizmanager import QuizManager
 
+
 class QuizApp:
-    QUIZ_FOLDER = 'Quizzes'
+    QUIZ_FOLDER = "Quizzes"
 
     def __init__(self):
         self.username = ""
+        self.result = None
         self.qm = QuizManager(QuizApp.QUIZ_FOLDER)
 
-    def startup(self):        
+    def startup(self):
         # print the greeting at startup
         self.greeting()
 
@@ -16,7 +19,7 @@ class QuizApp:
         self.username = input("What is your name? ")
         print(f"Welcome, {self.username}!")
         print()
-    
+
     def greeting(self):
         print("-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~")
         print("~~~~~~ Welcome to PyQuiz! ~~~~~~")
@@ -42,10 +45,10 @@ class QuizApp:
     def menu(self):
         self.menu_header()
 
-        # Get the user's selection and act on it. This loop will
-        # Run until the user exits the app
+        # get the user's selection and act on it. This loop will
+        # run until the user exits the app
         selection = ""
-        while (True):
+        while True:
             selection = input("Selection? ")
 
             if len(selection) == 0:
@@ -61,7 +64,7 @@ class QuizApp:
                 continue
             elif selection[0] == 'L':
                 print("\nAvailable Quizzes Are:")
-                # List the available quizzes
+                # list the available quizzes
                 self.qm.list_quizzes()
                 print("----------------------------------\n")
                 continue
@@ -70,12 +73,15 @@ class QuizApp:
                     quiznum = int(input("Quiz number: "))
                     print(f"You've selected quiz {quiznum}")
 
-                    # Start the quiz
-                    self.qm.take_quiz(quiznum, self.username)
+                    # start the quiz and get the results back
+                    self.result = self.qm.take_quiz(quiznum, self.username)
                     self.qm.print_results()
 
-                    # TODO: ask the user if they want to save the results
-
+                    # ask the user if they want to save the results
+                    dosave = input("Save the results? (y/n): ")
+                    dosave = dosave.capitalize()
+                    if len(dosave) > 0 and dosave[0] == 'Y':
+                        self.qm.save_results()
                 except:
                     self.menu_error()
             else:
@@ -87,6 +93,7 @@ class QuizApp:
         self.startup()
         # Start the main program menu and run until the user exits
         self.menu()
+
 
 if __name__ == "__main__":
     app = QuizApp()

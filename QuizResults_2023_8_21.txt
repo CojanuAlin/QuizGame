@@ -1,0 +1,8 @@
+*******************************************
+RESULTS for Jan
+Date: 2023-08-21 17:49:15.186922
+ELAPSED TIME: 0:00:19
+QUESTIONS: 3 out of 4 correct
+SCORE: 18 points of possible 28
+*******************************************
+

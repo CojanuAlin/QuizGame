@@ -1,5 +1,5 @@
-# Example file for LinkedIn Learning Course "Python: Build a Quiz App" by Joe Marini
 # QuizManager manages the quiz content
+
 import os.path
 import os
 import quizparser
@@ -31,7 +31,7 @@ class QuizManager:
         for i, f in enumerate(dircontents):
             if f.is_file():
                 parser = quizparser.QuizParser()
-                self.quizzes[i+1] = parser.parse_quiz(f)
+                self.quizzes[i + 1] = parser.parse_quiz(f)
 
     # print a list of the currently installed quizzes
     def list_quizzes(self):
@@ -43,7 +43,7 @@ class QuizManager:
         self.quiztaker = username
         self.the_quiz = self.quizzes[quizid]
         self.results = self.the_quiz.take_quiz()
-        return(self.results)
+        return (self.results)
 
     # prints the results of the most recently taken quiz
     def print_results(self):
@@ -57,7 +57,7 @@ class QuizManager:
         filename = f"QuizResults_{today.year}_{today.month}_{today.day}.txt"
         n = 1
         # if the file name already exists, then add a digit to the end until it's unique
-        while(os.path.exists(filename)):
+        while (os.path.exists(filename)):
             filename = f"QuizResults_{today.year}_{today.month}_{today.day}_{n}.txt"
             n = n + 1
 

@@ -1,13 +1,70 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<QuizML name="Geography Fun!">
+<QuizML name="Romania Trivia">
+    <!-- Question 1 -->
     <Question type="multichoice" points="5">
-        <QuestionText answer="3">What is the largest state in the US?</QuestionText>
-        <Answer name="1">Texas</Answer>
-        <Answer name="2">Califorina</Answer>
-        <Answer name="3">Alaska</Answer>
-        <Answer name="4">Montana</Answer>
+        <QuestionText answer="2">Which famous castle is located in Romania?</QuestionText>
+        <Answer name="1">Windsor Castle</Answer>
+        <Answer name="2">Bran Castle</Answer>
+        <Answer name="3">Neuschwanstein Castle</Answer>
+        <Answer name="4">Prague Castle</Answer>
     </Question>
+    
+    <!-- Question 2 -->
+    <Question type="multichoice" points="4">
+        <QuestionText answer="4">Which river runs through the capital city of Romania?</QuestionText>
+        <Answer name="1">Seine</Answer>
+        <Answer name="2">Thames</Answer>
+        <Answer name="3">Danube</Answer>
+        <Answer name="4">Dambovita</Answer>
+    </Question>
+    
+    <!-- Question 3 -->
     <Question type="tf" points="3">
-        <QuestionText answer="t">The lowest point on land in the US is in Death Valley, Califorina</QuestionText>
+        <QuestionText answer="f">Transylvania is a separate country in Eastern Europe.</QuestionText>
+    </Question>
+	
+	<!-- Question 4 -->
+    <Question type="multichoice" points="5">
+        <QuestionText answer="2">Which medieval fortress is a UNESCO World Heritage Site located in Romania?</QuestionText>
+        <Answer name="1">Tower of London</Answer>
+        <Answer name="2">Sighișoara Citadel</Answer>
+        <Answer name="3">Mont Saint-Michel</Answer>
+        <Answer name="4">Prague Castle</Answer>
+    </Question>
+    
+    <!-- Question 5 -->
+    <Question type="multichoice" points="4">
+        <QuestionText answer="1">In which region of Romania can you find the famous painted monasteries?</QuestionText>
+        <Answer name="1">Bucovina</Answer>
+        <Answer name="2">Transylvania</Answer>
+        <Answer name="3">Maramureș</Answer>
+        <Answer name="4">Oltenia</Answer>
+    </Question>
+    
+    <!-- Question 6 -->
+    <Question type="tf" points="3">
+        <QuestionText answer="t">The city of Timișoara is known as the birthplace of the 1989 Romanian Revolution.</QuestionText>
+    </Question>
+	
+	<!-- Question 7 -->
+    <Question type="multichoice" points="5">
+        <QuestionText answer="4">Which natural formation in Romania is often referred to as "The Sphinx" due to its resemblance to the Egyptian monument?</QuestionText>
+        <Answer name="1">Bran Castle</Answer>
+        <Answer name="2">Peles Castle</Answer>
+        <Answer name="3">Corvin Castle</Answer>
+        <Answer name="4">Babele</Answer>
+    </Question>
+    
+    <!-- Question 8 -->
+    <Question type="multichoice" points="4">
+        <QuestionText answer="3">What is the name of the region in Romania famous for its traditional wooden churches?</QuestionText>
+        <Answer name="1">Bukovina</Answer>
+        <Answer name="2">Banat</Answer>
+        <Answer name="3">Maramureș</Answer>
+        <Answer name="4">Moldova</Answer>
+    </Question>
+    
+    <!-- Question 9 -->
+    <Question type="tf" points="3">
+        <QuestionText answer="f">The capital city of Romania is Budapest.</QuestionText>
     </Question>
 </QuizML>

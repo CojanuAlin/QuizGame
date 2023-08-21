@@ -21,3 +21,12 @@ Follow the steps below to get a copy of the project up and running on your local
 
 - Python (version mentioned in the course)
 - Basic understanding of Python programming
+
+###  Usage
+Clone the repository:
+   git clone https://github.com/your-username/quiz-app.git
+   cd quiz-app
+   python quiz_app.py
+Run the application using the command provided above.
+Follow the on-screen instructions to answer the quiz questions.
+View your final score at the end of the quiz.
